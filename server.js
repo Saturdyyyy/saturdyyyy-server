@@ -23,12 +23,12 @@ app.use(express.json());
 
 // ─── YOUR CREDENTIALS ───────────────────────────────
 const CLIENT_ID     = '20cbe9b5e25a4c808410b2d0ad5f01be';
-const CLIENT_SECRET = '9051dcb0d8a741118e8690ecbc88a057';
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI  = 'http://127.0.0.1:3001/callback';
 // ────────────────────────────────────────────────────
 
 // After step 5-6 above, paste your refresh token here:
-let REFRESH_TOKEN = 'AQDOkyEG6-AJ-BXYbcj3MPXHA2h_e8aY4MhicSr7U_0Qv_0D1OTkC6VijDf2x5bZXtzBrWQVYkXF5AXlhG-pD30N8jlNMm4MXjVqWIxNt8SspZHSf_1bE7pmYqg3IR_mwE0';
+let REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
 const B64 = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
 
